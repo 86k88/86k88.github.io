@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>you are an egg</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="stage" aria-hidden="true"></div>
+
+  <div id="egg">you are an egg</div>
+  <div id="hint">click</div>
+
+  <!-- Hardcoded audio (kept) -->
+  <audio id="bgm" loop preload="auto">
+    <source src="assets/music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <audio id="ding" preload="auto">
+    <source src="assets/ding.mp3" type="audio/mpeg" />
+  </audio>
+
+  <audio id="pop" preload="auto">
+    <source src="assets/pop.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Auto-generated SFX list (NO fetch, works on file:// too) -->
+  <script src="assets/sfx/manifest.js"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>

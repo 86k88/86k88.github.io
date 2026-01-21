@@ -1,0 +1,77 @@
+:root {
+  --bg: #fdfdfd;
+  --fg: #111;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  overflow: hidden;
+  user-select: none;
+  cursor: default;
+  font-family: Arial Black, Arial, sans-serif;
+}
+
+/* The floating particle "stage" */
+#stage {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Main centered text */
+#egg {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(2.25rem, 7vw, 5rem);
+  letter-spacing: 0.01em;
+  text-align: center;
+  line-height: 1.05;
+  padding: 0 1rem;
+  transition: opacity 180ms linear, transform 180ms linear;
+}
+
+#egg.fade {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.98);
+}
+
+/* Tiny "click" hint that disappears once audio unlocked */
+#hint {
+  position: fixed;
+  left: 50%;
+  top: calc(50% + 5.0rem);
+  transform: translateX(-50%);
+  font-size: 0.9rem;
+  font-family: Arial, sans-serif;
+  opacity: 0.25;
+  transition: opacity 250ms linear;
+}
+
+#hint.hidden {
+  opacity: 0;
+}
+
+/* Individual burst sprites */
+.sprite {
+  position: fixed;
+  width: 42px;
+  height: 42px;
+  will-change: transform, opacity;
+  opacity: 0.95;
+  transform: translate(-50%, -50%);
+  filter: saturate(1.05) contrast(1.05);
+}
+
+/* Subtle “old web” vibe if you want: uncomment */
+/*
+body {
+  image-rendering: pixelated;
+}
+*/
