@@ -181,7 +181,7 @@ function registerTapAndMaybeCalmDown() {
 	  calmDownCooldownUntil = now + 2500;
 
 	  // Force calm message for 5 seconds
-	  messageOverrideUntil = Date.now() + 5000;
+	  messageOverrideUntil = Date.now() + 1400;
 
 	  setEggText(CALM_MSG);
 	  playRandomSfx(0.35);
@@ -189,7 +189,7 @@ function registerTapAndMaybeCalmDown() {
 	  // Optional: after override ends, reset to baseline
 	  setTimeout(() => {
 		if (Date.now() >= messageOverrideUntil) {
-		  setEggText("you are an egg");
+		  setEggText("maybe get a brisket with eggs next time... you're egging me too much...");
 		}
 	  }, 5100);
 
